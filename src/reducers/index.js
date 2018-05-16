@@ -3,7 +3,7 @@
 
 const initialState = {
     id_setting: 1488,
-    cash: 1800,
+    money: 0,
     seconds: 0,
     history: {
         time: '12:12',
@@ -27,6 +27,9 @@ export default function indexReducer (state = initialState, action) {
         case "AUTH_STATUS": {
             console.log(action.payload)
             return { ...state, isAuthenticated: action.payload }
+        }
+        case "EARN_MONEY": {
+            return { ...state, money: state.money + action.earned}
         }
         default: return state
     }

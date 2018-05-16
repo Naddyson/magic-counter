@@ -5,3 +5,11 @@ export function timer_tick() {
         })
     }
 }
+export function earn_money(earned){
+    return dispatch => {
+        dispatch({
+            type: "EARN_MONEY",
+            earned: earned
+        })
+    }
+}

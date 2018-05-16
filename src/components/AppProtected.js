@@ -8,6 +8,8 @@ import History from './History';
 import Winners from './Winners';
 import Settings from './Settings';
 import Timer from './Timer';
+
+import Money from './Money'
 const styles = theme => ({
     root: {
         width: '100%',
@@ -76,6 +78,7 @@ class AppProtected extends Component {
                     </Tabs>
                     <div className='head'>
                         <Timer/>
+                        <Money/>
                     </div>
                 </AppBar>
 
